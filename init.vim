@@ -22,9 +22,9 @@ let mapleader = " "
 
 set encoding=UTF-8
 
-xnoremap k :move '<-2<CR>gv-gv
+xnoremap K :move '<-2<CR>gv-gv
 
-xnoremap j :move '>+1<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
 
 vnoremap < <gv
 
@@ -34,6 +34,8 @@ nmap <leader>w :w <CR>
 
 nmap <leader>q :q <CR>
 
+nmap <leader>z :g/-z-/s//<>/g <CR>
+
 " Add command neovim
 command Py execute "!python %"
 
@@ -41,12 +43,7 @@ command Php execute "!php %"
 
 command Js execute "!node %"
 
-" Añadí esto por que comumente debaja presionado shit
-" y se ingresaba el valor doble u mayúscula
 command W execute "w"
-
-" Shortcut of command
-" map <F5> :Py<CR>
 
 " Layouts
 " HTML
