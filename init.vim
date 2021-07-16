@@ -26,9 +26,9 @@ xnoremap K :move '<-2<CR>gv-gv
 
 xnoremap J :move '>+1<CR>gv-gv
 
-vnoremap < <gv
+vnoremap z <gv
 
-vnoremap > >gv
+vnoremap Z >gv
 
 nmap <leader>w :w <CR>
 
