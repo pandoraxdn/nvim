@@ -2,10 +2,10 @@
 # Neovim configuration Rodrigo Xdn
 <h2>Install</h2>
 <p>
-  apt install git
-  pacman -S git
-  eopkg it git
-  dnf install git
+  apt install git <br>
+  pacman -S git <br>
+  eopkg it git <br>
+  dnf install git <br>
 </p>
 <p>
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
