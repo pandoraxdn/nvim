@@ -1,5 +1,5 @@
-![Neovim](https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png)
 # Neovim configuration Rodrigo Xdn
+![Neovim](https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png)
 <h2>Install</h2>
 <p>
   apt install git <br>
