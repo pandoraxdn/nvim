@@ -30,6 +30,10 @@ vnoremap z <gv
 
 vnoremap Z >gv
 
+vnoremap < <gv
+
+vnoremap > >gv
+
 nmap <leader>w :w <CR>
 
 nmap <leader>q :q <CR>
