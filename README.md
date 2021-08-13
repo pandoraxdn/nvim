@@ -12,5 +12,9 @@
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 </p>
 <p>
+  Fix python tabnine install: <br> 
+  python3 -m pip install --user --upgrade pynvim
+</p>
+<p>
   :PlugInstall
 </p>
