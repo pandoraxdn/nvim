@@ -24,6 +24,14 @@ set encoding=UTF-8
 
 set nowrap
 
+set cursorline
+
+set hidden
+
+set ignorecase
+
+set smartcase
+
 xnoremap K :move '<-2<CR>gv-gv
 
 xnoremap J :move '>+1<CR>gv-gv
