@@ -50,6 +50,10 @@ nmap <leader>q :q <CR>
 
 nmap <leader>z :g/-z-/s//<>/g <CR>
 
+nmap <leader>n :bnext <CR>
+
+nmap <leader>b :bprevious <CR>
+
 " Add command neovim
 command Py execute "!python %"
 
