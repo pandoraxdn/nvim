@@ -85,7 +85,19 @@ Plug 'tweekmonster/django-plus.vim'
 
 Plug 'vim-scripts/Django-Projects'
 
-Plug 'codota/tabnine-vim' " before installation python3 -m pip install --user --upgrade pynvim
+if has('nvim')
+
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  
+else
+
+  Plug 'Shougo/deoplete.nvim'
+  
+  Plug 'roxma/nvim-yarp'
+  
+  Plug 'roxma/vim-hug-neovim-rpc'
+  
+endif
 
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
@@ -130,6 +142,8 @@ Plug 'tpope/vim-dotenv'
 Plug 'hdima/python-syntax'
 
 call plug#end()
+
+let g:deoplete#enable_at_startup = 1
 
 let python_highlight_all = 1
 
