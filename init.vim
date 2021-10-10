@@ -79,7 +79,12 @@ command Lbh execute "-1read $HOME/.config/nvim/.layouts/.layout_html.blade.php"
 " Laravel blade section
 command Lbs execute "-1read $HOME/.config/nvim/.layouts/.layout_section.blade.php"
 
+" Nix-shell layout
+command Lnix execute "-1read $HOME/.config/nvim/.layouts/.layout_shell.nix"
+
 call plug#begin('~/.local/share/nvim/plugged')
+
+Plug 'lnl7/vim-nix'
 
 Plug 'tweekmonster/django-plus.vim'
 
