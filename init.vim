@@ -61,9 +61,12 @@ command Php execute "!php %"
 
 command Js execute "!node %"
 
+command Go execute "!go run %"
+
 command W execute "w"
 
 " Layouts
+
 " HTML
 command Lh execute "-1read $HOME/.config/nvim/.layouts/.layout_html.html"
 
@@ -81,6 +84,9 @@ command Lbs execute "-1read $HOME/.config/nvim/.layouts/.layout_section.blade.ph
 
 " Nix-shell layout
 command Lnix execute "-1read $HOME/.config/nvim/.layouts/.layout_shell.nix"
+
+" Go main layout
+command Lgo execute "-1read $HOME/.config/nvim/.layouts/.layout_goland_main.go"
 
 call plug#begin('~/.local/share/nvim/plugged')
 
