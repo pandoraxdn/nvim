@@ -54,6 +54,8 @@ nmap <leader>n :bnext <CR>
 
 nmap <leader>b :bprevious <CR>
 
+nmap <leader>t :T <CR>
+
 " Add command neovim
 command Py execute "!python %"
 
@@ -64,6 +66,8 @@ command Js execute "!node %"
 command Go execute "!go run %"
 
 command W execute "w"
+
+command T execute "split term://zsh"
 
 " Layouts
 
