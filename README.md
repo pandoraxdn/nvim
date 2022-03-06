@@ -18,3 +18,6 @@
 <p>
   :PlugInstall
 </p>
+<p>
+    :CocInstall coc-clangd coc-deno coc-emmet coc-flutter coc-go coc-json coc-phpls coc-pyright coc-tabnine coc-tsserver
+</p>

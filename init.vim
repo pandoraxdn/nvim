@@ -32,6 +32,8 @@ set ignorecase
 
 set smartcase
 
+set noshowmode
+
 xnoremap K :move '<-2<CR>gv-gv
 
 xnoremap J :move '>+1<CR>gv-gv
@@ -94,27 +96,29 @@ command Lgo execute "-1read $HOME/.config/nvim/.layouts/.layout_goland_main.go"
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'othree/html5.vim'
+
+Plug 'mattn/emmet-vim'
+
 Plug 'lnl7/vim-nix'
 
 Plug 'tweekmonster/django-plus.vim'
 
 Plug 'vim-scripts/Django-Projects'
 
-if has('nvim')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  
-else
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-  Plug 'Shougo/deoplete.nvim'
-  
-  Plug 'roxma/nvim-yarp'
-  
-  Plug 'roxma/vim-hug-neovim-rpc'
-  
-endif
+"Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+
+Plug 'cocopon/iceberg.vim'
+
+Plug 'gkeep/iceberg-dark'
+
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -156,9 +160,17 @@ Plug 'tpope/vim-dotenv'
 
 Plug 'hdima/python-syntax'
 
+Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+
 call plug#end()
 
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
+
+let g:minimap_width = 10
+
+let g:minimap_auto_start = 1
+
+let g:minimap_auto_start_win_enter = 1
 
 let python_highlight_all = 1
 
@@ -186,9 +198,9 @@ nmap <Leader>s <Plug>(easymotion-s2)
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
 
-colorscheme onehalfdark
+colorscheme catppuccin
 
-let g:airline_theme='onehalfdark'
+let g:airline_theme='icebergDark'
 
 let g:javascript_plugin_jsdoc = 1
 
@@ -228,6 +240,3 @@ augroup END
 let g:jsx_ext_required = 1
 
 let g:jsx_pragma_required = 1
-
-" Notas
-" V seleccioná toda la línea en modo visual
