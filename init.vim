@@ -96,6 +96,8 @@ command Lgo execute "-1read $HOME/.config/nvim/.layouts/.layout_goland_main.go"
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'ryanoasis/vim-devicons'
+
 Plug 'othree/html5.vim'
 
 Plug 'mattn/emmet-vim'
@@ -179,6 +181,16 @@ let g:NERDTreeChDirMode = 2
 map <F2> :NERDTreeToggle<CR>
 
 map <F2><F2> :NERDTreeRefreshRoot<CR>
+
+autocmd StdinReadPre * let s:std_in=1
+
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+let g:NERDTreeDirArrowExpandable = ''
+
+let g:NERDTreeDirArrowCollapsible = ''
 
 let NERDTreeShowHidden=1
 
