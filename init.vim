@@ -34,6 +34,8 @@ set smartcase
 
 set noshowmode
 
+setlocal nobuflisted
+
 xnoremap K :move '<-2<CR>gv-gv
 
 xnoremap J :move '>+1<CR>gv-gv
@@ -50,7 +52,9 @@ nmap <leader>w :w <CR>
 
 nmap <leader>q :q <CR>
 
-nmap <leader>z :g/-z-/s//<>/g <CR>
+nmap <leader>e :Exit <CR>
+
+nmap <leader>z :g/<>/s//<>/g <CR>
 
 nmap <leader>n :bnext <CR>
 
@@ -70,6 +74,8 @@ command Go execute "!go run %"
 command W execute "w"
 
 command T execute "split term://zsh"
+
+command Exit execute "qa"
 
 " Layouts
 
@@ -162,11 +168,28 @@ Plug 'tpope/vim-dotenv'
 
 Plug 'hdima/python-syntax'
 
+Plug 'arcticicestudio/nord-vim'
+
+Plug '4513ECHO/vim-colors-hatsunemiku'
+
 Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+
+Plug 'nvim-lua/plenary.nvim'
+
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }
 
 call plug#end()
 
 "let g:deoplete#enable_at_startup = 1
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 let g:minimap_width = 10
 
@@ -210,9 +233,21 @@ nmap <Leader>s <Plug>(easymotion-s2)
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
 
-colorscheme catppuccin
+colorscheme hatsunemiku
 
-let g:airline_theme='icebergDark'
+let g:airline_theme = 'hatsunemiku'
+
+let g:minimap_width = 10
+
+let g:minimap_auto_start = 1
+
+let g:minimap_auto_start_win_enter = 1
+
+let g:minimap_block_buftypes = ['nofile', 'nowrite', 'quickfix', 'terminal', 'prompt']
+
+let g:minimap_close_filetypes =	['startify', 'netrw', 'vim-plug']
+
+let g:minimap_enable_highlight_colorgroup	= 1
 
 let g:javascript_plugin_jsdoc = 1
 
